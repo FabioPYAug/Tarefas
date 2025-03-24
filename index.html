@@ -2,17 +2,24 @@
 <html lang="pt-br">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="scripts.js">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <h3>Adicionar Item</h3>
-        <h3>Para Fazer</h3>
-        <h3>Feitos</h3>
+        <h1>Lista de Tarefas</h1>
+        <form id="taskForm">
+            <input type="text" id="InputTarefa" placeholder="Adicione uma nova tarefa..." required>
+            <button type="submit">Adicionar</button>
+        </form>
+        <h2>Para Fazer</h2>
+        <ul id="ListaFazer"></ul>
+        <h2>Feitas</h2>
+        <ul id="ListaFeita"></ul>
     </div>
 </body>
 
