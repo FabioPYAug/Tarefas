@@ -45,6 +45,15 @@ button {
   transition: background-color 0.3s ease;
 }
 
+.noturno {
+  background-color: rgb(0, 0, 0);
+}
+
+.noturno:hover {
+  background-color: #2f1a38;
+  transform: scale(1.05);
+}
+
 button:hover {
   background-color: #0056b3;
 }
@@ -104,3 +113,4 @@ li:last-child {
     font-size: 1.5rem;
   }
 }
+
