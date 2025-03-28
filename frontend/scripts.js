@@ -1,4 +1,4 @@
-var taskInput = document.getElementById("new-task");
+var taskInput = document.getElementById("InputTarefa");
 var addButton = document.getElementsByTagName("button")[0];
-var incompleteTasksHolder = document.getElementById("incomplete-tasks");
-var completedTasksHolder = document.getElementById("completed-tasks");
+var incompleteTasksHolder = document.getElementById("ListaFazer");
+var completedTasksHolder = document.getElementById("ListaFeita");
