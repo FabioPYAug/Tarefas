@@ -7,5 +7,5 @@ router.register(r'listas', ListaViewSet)
 router.register(r'itens', ItemViewSet)
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path('', include(router.urls)),
 ]
