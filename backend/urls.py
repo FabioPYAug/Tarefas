@@ -5,13 +5,13 @@ from django.http import JsonResponse
 def api_root(request):
     return JsonResponse({
         "endpoints": {
-            #"questions": "/api/questions/",
-            #"categories": "/api/categories/"
+            "listas": "/api/listas/", 
+            "itens": "/api/itens/",  
         }
     })
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('api/', include('tarefas.urls')), 
-    path('', api_root), 
+    path('admin/', admin.site.urls),  
+    path('api/', include('lista.urls')),
+    path('', api_root),
 ]
