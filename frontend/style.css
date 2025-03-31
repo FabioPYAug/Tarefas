@@ -130,9 +130,17 @@ li:last-child {
 }
 
 .dark-mode button {
-  background-color: #6200ea;
+  background-color: #d4d4d4;
 }
 
 .dark-mode button:hover {
-  background-color: #3700b3;
+  background-color: #7a7a7a;
+}
+
+.dark-mode #modonoturno i {
+  color: #000000; 
+}
+
+.dark-mode #Adicionar {
+  color: black; 
 }
