@@ -100,3 +100,6 @@ var addTask = function() {
   var ajaxRequest = function() {
     console.log("AJAX Request");
   }
+
+  addButton.addEventListener("click", addTask);
+  addButton.addEventListener("click", ajaxRequest);
