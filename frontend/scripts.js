@@ -4,21 +4,16 @@ var incompleteTasksHolder = document.getElementById("ListaFazer");
 var completedTasksHolder = document.getElementById("ListaFeita");
 
 var createNewTaskElement = function(taskString) {
-  //Create List Item
   var listItem = document.createElement("li");
 
-  //input (checkbox)
-  var checkBox = document.createElement("input"); // checkbox
-  //label
+  var checkBox = document.createElement("input"); 
+
   var label = document.createElement("label");
-  //input (text)
-  var editInput = document.createElement("input"); // text
-  //button.edit
+
+  var editInput = document.createElement("input");
   var editButton = document.createElement("button");
-  //button.delete
   var deleteButton = document.createElement("button");
   
-      //Each element needs modifying
   
   checkBox.type = "checkbox";
   editInput.type = "text";
@@ -30,8 +25,7 @@ var createNewTaskElement = function(taskString) {
   
   label.innerText = taskString;
   
-    
-      // each element needs appending
+
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
@@ -40,3 +34,31 @@ var createNewTaskElement = function(taskString) {
 
   return listItem;
 }
+
+var addTask = function() {
+    console.log("Add task...");
+    var listItem = createNewTaskElement(taskInput.value);
+    incompleteTasksHolder.appendChild(listItem);
+    bindTaskEvents(listItem, taskCompleted);  
+    
+    taskInput.value = "";   
+  }
+  
+  var editTask = function() {
+    console.log("Edit Task...");
+    
+    var listItem = this.parentNode;
+    
+    var editInput = listItem.querySelector("input[type=text]")
+    var label = listItem.querySelector("label");
+    
+    var containsClass = listItem.classList.contains("editMode");
+    if(containsClass) {
+      label.innerText = editInput.value;
+    } else {
+      editInput.value = label.innerText;
+    }
+    
+    listItem.classList.toggle("editMode");
+   
+  }
