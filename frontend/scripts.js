@@ -103,3 +103,11 @@ var addTask = function() {
 
   addButton.addEventListener("click", addTask);
   addButton.addEventListener("click", ajaxRequest);
+
+for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
+  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+}
+
+for(var i = 0; i <  completedTasksHolder.children.length; i++) {
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
+}
