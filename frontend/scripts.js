@@ -36,7 +36,7 @@ var createNewTaskElement = function(taskString) {
 }
 
 var addTask = function() {
-    console.log("Add task...");
+    console.log("Adicionar tarefa...");
     var listItem = createNewTaskElement(taskInput.value);
     incompleteTasksHolder.appendChild(listItem);
     bindTaskEvents(listItem, taskCompleted);  
@@ -45,7 +45,7 @@ var addTask = function() {
   }
   
   var editTask = function() {
-    console.log("Edit Task...");
+    console.log("Editar tarefa...");
     
     var listItem = this.parentNode;
     
@@ -61,4 +61,42 @@ var addTask = function() {
     
     listItem.classList.toggle("editMode");
    
+  }
+
+  var deleteTask = function() {
+    console.log("Deletar tarefa...");
+    var listItem = this.parentNode;
+    var ul = listItem.parentNode;
+    
+    ul.removeChild(listItem);
+  }
+  
+  var taskCompleted = function() {
+    console.log("Tarefa completa...");
+    var listItem = this.parentNode;
+    completedTasksHolder.appendChild(listItem);
+    bindTaskEvents(listItem, taskIncomplete);
+  }
+  
+  var taskIncomplete = function() {
+    console.log("Tarefa Incompleta...");
+    var listItem = this.parentNode;
+    incompleteTasksHolder.appendChild(listItem);
+    bindTaskEvents(listItem, taskCompleted);
+  }
+  
+  var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
+    console.log("Vincular eventos de itens da lista");
+    var checkBox = taskListItem.querySelector("input[type=checkbox]");
+    var editButton = taskListItem.querySelector("button.edit");
+    var deleteButton = taskListItem.querySelector("button.delete");
+    
+    editButton.onclick = editTask;
+    
+    deleteButton.onclick = deleteTask;
+    checkBox.onchange = checkBoxEventHandler;
+  }
+  
+  var ajaxRequest = function() {
+    console.log("AJAX Request");
   }
