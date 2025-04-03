@@ -44,11 +44,24 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+.btn-concluir{
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #129b00; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.btn-concluir:hover {
+  background-color: rgb(0, 71, 6); 
+}
 
 .btn-excluir {
   padding: 10px 15px;
   font-size: 1rem;
-  background-color: #ff0000; 
+  background-color: #af0000; 
   color: white;
   border: none;
   border-radius: 4px;
@@ -57,7 +70,7 @@ button {
 }
 
 .btn-excluir:hover {
-  background-color: #8d0000; 
+  background-color: #610000; 
 }
 
 
@@ -145,11 +158,11 @@ li:last-child {
   border: 1px solid #555;
 }
 
-.dark-mode button {
+.dark-mode .botaoPadrao {
   background-color: #d4d4d4;
 }
 
-.dark-mode button:hover {
+.dark-mode .botaoPadrao:hover {
   background-color: #7a7a7a;
 }
 

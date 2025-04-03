@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
         li.textContent = tarefa;
         
         const btnConcluir = document.createElement("button");
-        btnConcluir.innerHTML = "✔";
+        btnConcluir.innerHTML = "Concluir";
         btnConcluir.classList.add("btn-concluir");
         btnConcluir.addEventListener("click", () => moverParaFeito(li));
         
