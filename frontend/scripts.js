@@ -41,24 +41,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function adicionarTarefa(tarefa) {
         if (tarefa.trim() === "") return;
-        
+    
         const li = document.createElement("li");
         li.textContent = tarefa;
-        
+    
+        const divBotoes = document.createElement("div");
+        divBotoes.classList.add("action-buttons");
+    
         const btnConcluir = document.createElement("button");
         btnConcluir.innerHTML = "Concluir";
         btnConcluir.classList.add("btn-concluir");
         btnConcluir.addEventListener("click", () => moverParaFeito(li));
-        
+    
         const btnExcluir = document.createElement("button");
         btnExcluir.innerHTML = "Apagar";
         btnExcluir.classList.add("btn-excluir");
         btnExcluir.addEventListener("click", () => li.remove());
-        
-        li.appendChild(btnConcluir);
-        li.appendChild(btnExcluir);
+    
+        divBotoes.appendChild(btnConcluir);
+        divBotoes.appendChild(btnExcluir);
+    
+        li.appendChild(divBotoes);
         listaFazer.appendChild(li);
     }
+    
 
     function moverParaFeito(tarefa) {
         tarefa.querySelector(".btn-concluir").remove();

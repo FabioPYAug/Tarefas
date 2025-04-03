@@ -21,6 +21,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
 form {
   display: flex;
   gap: 10px;
@@ -44,51 +49,17 @@ button {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.btn-concluir{
-  padding: 10px 15px;
-  font-size: 1rem;
-  background-color: #129b00; 
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.btn-concluir:hover {
-  background-color: rgb(0, 71, 6); 
-}
-
-.btn-excluir {
-  padding: 10px 15px;
-  font-size: 1rem;
-  background-color: #af0000; 
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-excluir:hover {
-  background-color: #610000; 
-}
-
-
-.noturno {
-  background-color: rgb(0, 0, 0);
-}
-
-.noturno:hover {
-  background-color: #391a46;
-}
 
 button:hover {
   background-color: #0056b3;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-top: 20px;
+.noturno {
+  background-color: black;
+}
+
+.noturno:hover {
+  background-color: #391a46;
 }
 
 ul {
@@ -109,9 +80,39 @@ li:last-child {
   border-bottom: none;
 }
 
-.task-text {
-  flex: 1;
-  margin-right: 10px;
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-concluir {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #129b00; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-concluir:hover {
+  background-color: rgb(0, 71, 6); 
+}
+
+.btn-excluir {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: #af0000; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-excluir:hover {
+  background-color: #610000; 
 }
 
 .completed {
@@ -119,19 +120,7 @@ li:last-child {
   color: #888;
 }
 
-.action-buttons button {
-  background: none;
-  border: none;
-  color: #007bff;
-  font-size: 0.9rem;
-  cursor: pointer;
-  margin-left: 5px;
-}
-
-.action-buttons button:hover {
-  color: #0056b3;
-}
-
+/* Responsividade */
 @media (max-width: 600px) {
   .container, input {
     width: 60%;
@@ -172,4 +161,22 @@ li:last-child {
 
 .dark-mode #Adicionar {
   color: black; 
+}
+
+.dark-mode .btn-concluir {
+  background-color: #129b00;
+  color: white;
+}
+
+.dark-mode .btn-concluir:hover {
+  background-color: rgb(0, 71, 6);
+}
+
+.dark-mode .btn-excluir {
+  background-color: #af0000;
+  color: white;
+}
+
+.dark-mode .btn-excluir:hover {
+  background-color: #610000;
 }
