@@ -12,19 +12,20 @@
 
 <body>
     <div class="container">
-        <button id="modonoturno" class="noturno"><i class="fas fa-moon"></i></button>
+        <button id="modonoturno" class="noturno">
+            <i id="iconeModo" class="fas fa-moon"></i>
+        </button>
+        
         <h1>Lista de Tarefas</h1>
         <form id="taskForm">
             <input type="text" id="InputTarefa" placeholder="Adicione uma nova tarefa..." required>
-            <button type="submit">Adicionar</button>
+            <button type="submit" id="Adicionar">Adicionar</button>
         </form>
         <h2>Para Fazer</h2>
         <ul id="ListaFazer">
-            <li>teste</li>
         </ul>
         <h2>Feitas</h2>
         <ul id="ListaFeita">
-            <li>teste</li>
         </ul>
     </div>
 </body>
